@@ -1,0 +1,127 @@
+Things that I would highlight in the book if I wasn't borrowing it from the Library...
+
+Also love that the little thing on the side of Visual Studio looks like the hacking
+    terminal stuff from Mass Effect 2
+
+1 - Developing a pragmatic learning strategy
+    - "Knowing how to write truly efficient, secure, and maintainable applications..."
+        - you mean copy and pasting from ChatGPT or Stack Overflow?
+        - the one guy in Tennesse updating code to hold up the entire internet lol
+
+    - Pythonic: an idiomatic coding style that all Python programmers strive to acquire
+        - this is not a definition, wtf?
+        - from Google: writing code in a way that aligns with the principles and idioms
+            of the python language.
+            - Readable: Python emphasizes clarity, making the code easy for other developers
+                to understand and maintain
+            - Simple: It favors straightforward and consise solutions over overly complex ones
+            - Concise: Python provides features like list comprehensions and built-in functions
+                that enable expressing logic efficiently and with fewer lines of code
+            - Maintainable: Following Pythonic practices makes the code easier to modify and 
+                update over time.
+            - Consistent: Python has a strong community-driven style guide, PEP 8, which promotes
+                consistency in code style across projects
+    
+    - Focusing on Readable Code:
+        - Are your variables named properly to indicate what they are?
+        - Do your functions have proper signatures that indicate what they do?
+        - Do you organize your code consistently across files?
+        - Is your project folder structured with specific files stored in the
+            desired folders?
+        - It is good to ask these questions throughout the project and not just at the end
+            or when we need someone else to look at what we've made
+    
+    - What Python can do well or as well as other languages
+        - Cross-Platform: Any code that you write on your own platform can run on other computers
+            without any restrictions imposed by the differences between platforms
+            - I didn't know that this was a thing, can some languages just NOT work properly
+                on some machines? This is not something I was taught in other coding classes
+        - Expressive and Readable: Python's syntax is simpler than that of many other languages ...
+            You'll find that well-written Python code is enjoyable to read, just like well-written
+                prose 
+            - I've seen some Python code, there's a decent amount of it, especially on leetcode that
+                does not resemble "well-written prose"
+        - Fast for Prototyping: Given it's simple syntax ... [Python] requires less work to produce
+            a fucntional prototype in Python than in other languages
+            - this must be why lots of start-ups use Python, or at least I THINK they do, it 
+                seems like an ideal language for folks trying to build something quickly
+        - Standalone: The basic Python package contains all essential libraries that you need to perform
+            any routine
+            - that is good news for me because I do nto like interacting with the terminal half the time
+                - I want the programmer equivalent of Princess Treatment
+                    - give me a cute little GUI girlie C;
+        
+    Notable Python Tools:
+        - Web Development:
+            - Flask: A micro web framework; good for building lightweight web apps; flexible
+                extensibility for third-party functionalities
+            - Django: A complete web framework; good for building database-driven web apps;
+                highly scalable as an enterprise solution
+            - FastAPI: A web framework for building application programming interfaces (APIs);
+                data validation and data conversion; automatic generation of API web interfaces
+            - Streamlit: A web framework for easy building of data-related apps; popular among data
+                scientists and ML engineers
+        - Data Science:
+            - NumPy: Specialized for processing large, multidimensional arrays; high computational efficiency;
+                integral to many other libraries
+            - pandas: A versatile package for processing spreadsheet-like two-dimensional data; comprehensive
+                data manipulations
+            - statsmodels: A popular package for statistics, such as linear regression, correlation, Bayesian modeling, 
+                and survival analysis
+                - Bayesian modeling is a statistical approach that uses Bayes’ Theorem to update the probability 
+                    of a hypothesis as more evidence or data becomes available. It's widely used for 
+                    inference, prediction, and decision-making under uncertainty.
+                - Linear regression is a statistical method used to model the relationship between one or more independent 
+                    variables (features) and a dependent variable (target) by fitting a straight line 
+                    (in the simplest case) to the data.
+                - Survival analysis is a branch of statistics that deals with analyzing the time until an event occurs 
+                    often referred to as "time-to-event" data.
+            - Matplotlib: An object-oriented paradigm for drawing histograms, scatter plots, pie charts, and other common 
+                figures with a variety of customizable settings
+                - A histogram is a type of chart that shows the distribution of a numerical variable by grouping data into 
+                    intervals (called bins) and displaying the frequency (or count) of data points in each bin.
+                    - seems like a fancy bar graph?
+            - Seaborn: An easy-to-use visualization library for drawing attractive graphics; 
+                high-level APIs based on Matplotlib
+        - Machine Learning:
+            - Scikit-learn: A wide range of preprocessing tools for building ML models; implementation of
+                common ML Algorithms
+                - In machine learning, preprocessing refers to the steps you take to prepare raw data for modeling. 
+                    Real-world data is often messy, inconsistent, or incomplete, and preprocessing helps transform
+                    it into a clean, structured format that models can learn from effectively.
+            - TensorFlow: A framework with both high and low level APIs; Tensor board visualization board;
+                good for building complex neural networks
+                - In machine learning, a neural network is a type of model inspired by the structure and function 
+                    of the human brain. It is made up of layers of interconnected nodes (also called neurons) 
+                    that can learn to recognize patterns in data.
+                    - A neural network takes input data, processes it through "layers of neurons" and produces an
+                        output - such as a prediction of classification
+            - Keras: High-level APIs for building neural networks; easy to use; good for building low-performance
+                models.
+                - Weird that you would WANT to build a low-performance model...
+                - Apparently it might be easier to maintain, faster to train, faster to build, then easier to build off of
+                    but at that point like why even bother with this framework if you might eplace it down the road for 
+                    a higher performance model later down the road?
+                - It seems like this is good for prototyping things and once you're able to make something good you change to
+                    a different framework? But this seems inefficient because frameworks are different from each other, you'll
+                    have to restructure your whole code base for the new framework.
+            - PyTorch: A framework for building neural networks; more intuitive code styles than TensorFlow; good
+                for building complex neural networks
+                - I assume complex in this context just means something with either a lot of connections or a lot of
+                    "nodes"
+            - FastAI : hihg-level APIs for building neural networks on top of Pytorch; easy to use.
+
+            Relevant definitions:
+            - Frameworks: have the largest scope. Frameworks provide a complete set of functionalities that are
+                designed to perform a dedicated job at a high level, such as web development
+                - A framework is a reusable set of components and rules that helps developers build software 
+                    faster and more consistently by providing a structure to follow.
+            - Libraries: building blocks of frameworks, consisting of packages. Libraries provide functionalities
+                without users having to worry about the underlying packages
+                - A library is a set of reusable functions, classes, or modules written by someone 
+                    else that you can call in your code to perform common or complex tasks.
+            - Packages: provide specific functionalities. More specifically, packages bundle modules, and each module consists
+                of a set of closely related data structures and functions in a single file, such as a .py file 
+        
+
+    
