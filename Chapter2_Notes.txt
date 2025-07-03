@@ -1,0 +1,67 @@
+Processing and Formatting Strings
+
+    - Using f-strings to interpolate expressions and apply formatting
+    - Converting strings to other applicable data types
+    - Using regular expressions for advanced string processing
+        - not excited for RegEx shit...
+
+    F-String: a string literal that is prefixed with f or F, and allows expressions to be embedded directly 
+        inside curly braces {}.
+        - ex:
+            name = "Alice"
+            age = 30
+            greeting = f"My name is {name} and I am {age} years old."
+            print(greeting)
+            # Output: My name is Alice and I am 30 years old.
+
+    - Use F-Strings when you use strings as an output and have to deal with other variables
+        - use the {} to interpolate other data types into the string
+        - F-Strings are also more readable than other interpolation methods
+            - string interpolation means inserting variable values directly into a string
+
+        - ex:
+            task_f = f"Name: {name}; Urgency Level: {urgency}"
+
+            assert task == task_f == "Name: Homework; Urgency Level 5"
+        
+            - assert is a Python keyword used t ocreate an assertion statement, which evaluates the supplied
+                condition. When the condition is TRUE, the program continues its execution. When the condition is
+                FALSE, execution stops, and the program raises an AssertionError
+        
+        - F-Strings also support custom class instances
+
+    - Using f-strings to interpolate expressions
+        - f-strings can be used to interpolate expressions, which eliminates the need to create intermediate
+            variables.
+            - this means you can access data structures, call functions, or do calculations in the f-string
+                ex:
+                f"First Task: {tasks[0]}" 
+                    - This syntax allows us to access the 0th (or first) element in the list "tasks"
+                f"Task Name: {task_name.title()}"
+                    - This syntax calls the title method of the task_name class and outputs the answer into our 
+                        formatted string
+                f"Square: {number * number}
+                    - This example does the calculation of multiplying the inputted number by itself and then putting
+                        the result of that calculation into the f-string
+    
+    - expressions vs statements
+        - expression: a piece of code that produce a value when evaluated, and is usually one line of code
+        - statement: A complete instruction that does something, like creating a cariable or controlling flow.
+
+    - Although f-strings interpolate expressions natively, we should use this skill with caution because any
+        complicated expressions in an f-string compromise the readability of your code
+            - ex:
+                summary_text = f"Your average Score: {sum([95, 98, 97, 96, 97, 93]) / len(95, 98, 97, 96, 97, 93)}."
+                - while this will technically work, it does suck
+                    - the solution here is probably to seperately define the list in a different line and then
+                        reference it within the f-string
+                    fix: 
+                        grades = [95, 98, 97, 96, 97, 93]
+                        summary_text = f"Your Average Score: {sum(grades) / len(grades)}."
+                    
+                    - you could go even further and do the calculation outside of the f-string to make the f-string
+                        definition a little cleaner
+                    fix:
+                        grades = [95, 98, 97, 96, 97, 93]
+                        avg = sum(grades) / len(grades)
+                        summary_text = f"Your Average Score: {grades}."
