@@ -65,3 +65,25 @@ Processing and Formatting Strings
                         grades = [95, 98, 97, 96, 97, 93]
                         avg = sum(grades) / len(grades)
                         summary_text = f"Your Average Score: {grades}."
+
+    - F-strings are able to have specifiers added to them in order to have them format in certain ways
+        - F-string specifiers are formatting instructions used inside f-strings to control how values are 
+            displayed — such as number of decimal places, alignment, width, percentage, or date formatting.
+        - ex:
+            f"{value:specifier}"
+                - value: the variable or expression
+                - ":" : introduces the format specifier
+                - specifier: tells Python how to format the value
+        - Common F-String Specifiers:
+            - .2f -> fixed-point, 2 decimal places (3.14)
+            - , -> Adds a thousands seperator (1,000)
+            -  >10 -> Right-align in 10-character width (" 42")
+            - <10 -> Left-align in 10-character width ("42 ")
+            - ^10 -> Center-align in 10-character width (" 42 ")
+            - % -> Percentage (multiplies by 100 and adds a %) (75.00%)
+            - b, x, o -> Binary, hex, octal formatting (0b1010, 0xa, 0o12)
+
+            - datetime objects also have f-string specifiers but are a little more involved
+            - all of the numbers in aligning, decimal points, etc can be changed they don't
+                have to be the numbers in the examples
+        

@@ -4,4 +4,4 @@ total = sum(scores)
 num_scores = len(scores)
 average = total / num_scores
 
-print(f"Your Average Score is: {average}")
+print(f"Your Average Score is: {average:.4f}")
