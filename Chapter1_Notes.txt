@@ -3,7 +3,7 @@ Things that I would highlight in the book if I wasn't borrowing it from the Libr
 Also love that the little thing on the side of Visual Studio looks like the hacking
     terminal stuff from Mass Effect 2
 
-1 - Developing a pragmatic learning strategy
+Developing a pragmatic learning strategy
     - "Knowing how to write truly efficient, secure, and maintainable applications..."
         - you mean copy and pasting from ChatGPT or Stack Overflow?
         - the one guy in Tennesse updating code to hold up the entire internet lol
