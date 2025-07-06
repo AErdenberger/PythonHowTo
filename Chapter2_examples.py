@@ -4,4 +4,8 @@ total = sum(scores)
 num_scores = len(scores)
 average = total / num_scores
 
-print(f"Your Average Score is: {average:.4f}")
+print(f"Your Average Score is: {average:.2f}")
+
+wholesale_dict = {"name" : "Vacuum", "price" : 130.67}
+
+print(f"Wholesale Price: ${wholesale_dict['price']:.2f}")
