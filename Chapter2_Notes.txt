@@ -87,3 +87,55 @@ Processing and Formatting Strings
             - all of the numbers in aligning, decimal points, etc can be changed they don't
                 have to be the numbers in the examples
         
+        - Common F-String Specifiers for numbers (extended from previous list):
+            - c -> Unicode representation of the integer
+            - d -> decimal format, using base 10
+            - 2e -> sceintific notation 
+            - 2g -> General format, automatically applying e or f
+        
+    - Maintainability: We constantly spot opportunities to refactor our code, usually at a "local" level.
+        The local optimization may seem to be insignificant, but these small improvements add up and determine
+        the entire project's overall maintainability 
+        - This is really important for projects that need to be held up for a long time especially when languages
+            get updated
+
+    - Although directly interpolating expressions by f-strings makes code cleaner, avoid using complicated 
+        expressions in f-strings, which may confuse your readers
+    - While traditional ways of interpolating strings can be used in Python, there's no need to actually use
+        them since the f-string style is easier to use and read
+
+    - How to convert strings to retrieve the represented data
+        - Most things that you can type on a keyboard is a string
+        - when dealing with "input" from the terminal the inputted data will be interpreted as a string 
+            even though it might be a number or list, etc.
+        - isalnum() is a inherit method for the String Class that allows you to check to see whether the
+            string is alphanumeric - meaning that it contains ONLY numbers and letters
+            - ex:
+                bad_username0 = "123!@#"
+                assert bad_username0.isalnum() == False 
+
+                bad_username1 = "abc..."
+                assert bad_username1.isalnum() == False 
+
+                good_username = "1a2b3c"
+                assert good_username.isalnum() == True
+        - isalpha() is an inherit method for the String Class that allows you to check whether or not the 
+            string is only letters
+            - is ALPHA, alphabet, letters... get it?
+            - all of htese methods that have a "is" as a prefix are returning True or False
+            - ex.
+                assert "Homework".isalpha() == True
+                assert "Homework123".isalpha() == False
+        - isnumeric() is an inherit method for the String Class that allows you to check whether or not the 
+            string is only numbers
+            - isdecimal() - checkis if all characters are decimal digits (0-9 ONLY)
+            - isdigit - Checks if all characters are digits including supersripts, subscripts, and decimal digits
+            - all isdecimal are also isdigit, and all is digit are also isnumeric
+            - seems like there are sometimes where you would want to be more specific with your checks, since the three     
+                methods go up in terms of specificity
+
+    - Casting strings to numbers
+        - in programming, casting means to convert one data type to another data type
+            - this is used a lot of times with user inputted data in order to convert it to a data type that 
+                the code can use besides a String.
+            
