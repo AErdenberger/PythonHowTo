@@ -32,3 +32,37 @@ print(f"Number List: {number_list}")
 #expected output: {1, 2, 3, 4, 5}
 
 ####################################
+
+def get_temperature():
+    user_input = input("Enter the temperature: ")
+    try:
+        number = float(user_input)
+    except ValueError:
+        print(f"Invalid input: {user_input} is not a number.")
+        return None
+    else:
+        if number < 10:
+            print(f"you entered: {number}, it's cold!")
+        elif number > 10 and number <= 25:
+            print(f"you entered: {number}, it's warm!")
+        else:
+            print(f"you entered: {number}, it's hot!")
+
+get_temperature()
+
+####################################
+
+import ast
+
+def get_user_input():
+    user_input = input("Enter something: ")
+    try:
+        safe_value = ast.literal_eval(user_input)
+    except (ValueError, SyntaxError):
+        print(f"Invalid input: {user_input} is not a valid Python literal.")
+        return None
+    return type(safe_value)
+
+get_user_input()
+
+####################################
