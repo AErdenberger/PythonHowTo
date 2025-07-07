@@ -138,4 +138,19 @@ Processing and Formatting Strings
         - in programming, casting means to convert one data type to another data type
             - this is used a lot of times with user inputted data in order to convert it to a data type that 
                 the code can use besides a String.
-            
+
+    - A constructor is a function that creates an instance object of a class.
+        - ex.
+            int("-5") -> -5
+            int("123") -> 123
+
+    - Iterables are objects that render items one by one, Strings, lists and tuples are common examples
+        of iterables 
+
+    - eval() - takes a string as an input and evaluates it as a Python expression and returns the result
+        - eval(expression, globals=None, locals=None)
+            - expression: A string containing a valid Python expression
+            - globals: A dictionary of global variables
+            - locals: A dictionary of local variables 
+            - IMPORTANT! eval() only works wiht EXPRESSIONS (e.g. "2 + 3" or "len('abc')"), 
+                not STATEMENTS (e.g. for, def, import)       
