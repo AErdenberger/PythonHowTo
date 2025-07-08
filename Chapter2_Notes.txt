@@ -153,4 +153,62 @@ Processing and Formatting Strings
             - globals: A dictionary of global variables
             - locals: A dictionary of local variables 
             - IMPORTANT! eval() only works wiht EXPRESSIONS (e.g. "2 + 3" or "len('abc')"), 
-                not STATEMENTS (e.g. for, def, import)       
+                not STATEMENTS (e.g. for, def, import)
+        - using eval() without verifying the integrity of the string object can cause bugs or even catastrophic
+            outcomes. Be cautious whenever you need to use this method
+        - Using eval() can be dangerous if the input string comes from an untrusted source because it 
+            executes arbitrary Python code. This can lead to security vulnerabilities.
+                ex.
+                    user_input = "__import__('os').system('rm -rf /')"  # 😱
+                    eval(user_input)  # This could delete all files if run!
+        - If you just want to convert strings to numbers or data structures, use:
+            - int(), float()
+            - ast.literal_eval() (from the ast module) for safely parsing Python literals
+                - A LITERAL in Python is a fixed value written directly in the code, representing data
+                    like numbers, text, or other types
+                    - Literals are hard coded values that don't need any computation to be created. They are
+                        used to assign basic values to variables or pass data directly into your code.
+
+    -Splitting and joining strings
+        - str.split()
+            - Breaks a string into a list of substrings based on a seperator
+            - Default seperator is whitespaces (tabs, spaces, and newlines)
+            - Syntax:
+                string.split(sep=None, maxsplit=-1)
+                - sep (optional): the delimete to split on.
+                    if omitted, splits on whitespace.
+                - maxsplit (optional): Maximum number of splits
+            - ex:
+                # Basic splitting
+                text = "apple,banana,cherry"
+                result = text.split(",")
+                print(result)  # ['apple', 'banana', 'cherry']
+
+                # Splitting on whitespace (default)
+                text = "Python is fun"
+                print(text.split())  # ['Python', 'is', 'fun']
+
+                # Using maxsplit
+                text = "a-b-c-d"
+                print(text.split("-", maxsplit=2))  # ['a', 'b', 'c-d']
+
+        - str.join()
+            - Combines a list (or any iterable) of strings into one string, plaveing a seperator
+                between each element
+            - Syntax:
+                seperator.join(iterable)
+                seperator: The strong to insert between the elements
+                iterable: A List, tuple, or other iterable containing STRINGS  
+            ex:
+                # Joining a list of words
+                words = ["Python", "is", "awesome"]
+                result = " ".join(words)
+                print(result)  # Python is awesome
+
+                # Joining with custom separator
+                items = ["apple", "banana", "cherry"]
+                print(",".join(items))  # apple,banana,cherry
+
+                # Joining characters
+                chars = ['P', 'y', 't', 'h', 'o', 'n']
+                print("".join(chars))  # Python

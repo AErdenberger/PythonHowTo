@@ -66,3 +66,92 @@ def get_user_input():
 get_user_input()
 
 ####################################
+
+#split vs rsplt
+
+def split_example():
+    text = "Hello, World!"
+    split_text = text.split(", ")
+    print(f"Split Text: {split_text}") # Expected output: ['Hello', 'World!']
+
+def rsplit_example():
+    text = "Hello, World!"
+    rsplit_text = text.rsplit(", ", 0)
+    print(f"RSplit Text: {rsplit_text}") # Expected output: ['Hello', 'World!']
+
+split_example()
+rsplit_example()
+
+####################################
+
+# Basic splitting
+text = "apple,banana,cherry"
+result = text.split(",")
+print(result)  # ['apple', 'banana', 'cherry']
+
+# Splitting on whitespace (default)
+text = "Python is fun"
+print(text.split())  # ['Python', 'is', 'fun']
+
+# Using maxsplit
+text = "a-b-c-d"
+print(text.split("-", maxsplit=2))  # ['a', 'b', 'c-d']
+
+# Splitting with a limit
+text = "one two three four"
+print(text.split(" ", 2))  # ['one', 'two', 'three four
+
+# Splitting with a custom separator
+text = "apple;banana;cherry"
+print(text.split(";"))  # ['apple', 'banana', 'cherry']
+
+# Splitting with a separator that doesn't exist
+text = "apple banana cherry"
+print(text.split(","))  # ['apple banana cherry']
+
+# Splitting an empty string
+text = ""
+print(text.split())  # []
+
+#############################################
+
+# Joining a list of words
+words = ["Python", "is", "awesome"]
+result = " ".join(words)
+print(result)  # Python is awesome
+
+# Joining with custom separator
+items = ["apple", "banana", "cherry"]
+print(",".join(items))  # apple,banana,cherry
+
+# Joining characters
+chars = ['P', 'y', 't', 'h', 'o', 'n']
+print("".join(chars))  # Python
+
+# Joining with an empty list
+empty_list = []
+print(" ".join(empty_list))  # (prints nothing, no error)
+
+# Joining with a single string
+single_string = "Hello"
+print(" ".join(single_string))  # H e l l o
+
+# Joining with a list containing non-string types
+mixed_list = ["Python", 3, "is", "fun"]
+try:
+    print(" ".join(mixed_list))  # Raises TypeError
+except TypeError as e:
+    print(f"Error: {e}")
+
+# Joining with a list containing None
+none_list = ["Python", None, "is", "fun"]
+try:
+    print(" ".join(none_list))  # Raises TypeError
+except TypeError as e:
+    print(f"Error: {e}")
+
+# Joining with a list containing empty strings
+empty_strings = ["", "Python", "", "is", "", "fun"]
+print(" ".join(empty_strings))  # Python is fun (ignores empty strings)
+
+#############################################
